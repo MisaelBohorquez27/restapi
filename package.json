@@ -203,9 +203,11 @@
   },
   "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "autostart": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "swagger-autogen": "node swagger.js"
+
   },
   "keywords": [],
   "author": "",

@@ -1,99 +1,99 @@
 {
-    "swagger": "2.0",
-    "info": {
-      "title": "REST API",
-      "description": "REST API with Express and Firestore",
-      "version": "1.0.0"
-    },
-    "host": "restapi-jja7.onrender.com",
-    "basePath": "/api",
-    "schemes": [
-      "http"
-    ],
-    "paths": {
-      "/items": {
-        "post": {
-          "tags": [
-            "Items"
-          ],
-          "summary": "Create an item",
-          "description": "Create an item",
-          "parameters": [
-            {
-              "name": "data",
-              "in": "body",
-              "description": "Data to create an item",
-              "required": true,
-              "schema": {
-                "type": "object",
-                "properties": {}
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "Item successfully created"
-            },
-            "400": {
-              "description": "Bad request"
+  "swagger": "2.0",
+  "info": {
+    "title": "REST API",
+    "description": "REST API with Express and Firestore",
+    "version": "1.0.0"
+  },
+  "host": "restapi-jja7.onrender.com",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/items": {
+      "post": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "Create an item",
+        "description": "Create an item",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Data to create an item",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
             }
           }
-        },
-        "get": {
-          "tags": [
-            "Items"
-          ],
-          "summary": "Get all items entries",
-          "description": "Get all items entries",
-          "responses": {
-            "200": {
-              "description": "Items entries successfully obtained"
-            },
-            "400": {
-              "description": "Bad request"
-            }
+        ],
+        "responses": {
+          "201": {
+            "description": "Item successfully created"
+          },
+          "400": {
+            "description": "Bad request"
           }
         }
       },
-      "/items/{id}": {
-        "put": {
-          "description": "",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Bad Request"
-            }
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "Get all items entries",
+        "description": "Get all items entries",
+        "responses": {
+          "200": {
+            "description": "Items entries successfully obtained"
+          },
+          "400": {
+            "description": "Bad request"
           }
-        },
-        "delete": {
-          "description": "",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Bad Request"
-            }
+        }
+      }
+    },
+    "/items/{id}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     }
   }
+}

@@ -57,13 +57,28 @@
     },
     "/items/{id}": {
       "put": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "",
         "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
           }
         ],
         "responses": {
@@ -76,13 +91,18 @@
         }
       },
       "delete": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "",
         "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
           }
         ],
         "responses": {
